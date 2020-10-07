@@ -29,7 +29,7 @@
                     return false;
                 }
 
-                // 验证密码：必须由字母，数字下划线组成，并且长度为5到12位
+                // // 验证密码：必须由字母，数字下划线组成，并且长度为5到12位
                 //1 获取用户名输入框里的内容
                 var passwordText = $("#userPwd").val();
                 //2 创建正则表达式对象
@@ -44,9 +44,9 @@
 
                 // 验证确认密码：和密码相同
                 //1 获取确认密码内容
-                var repwdText = $("#repwd").val();
+                var repwdText = $("#pwdCon").val();
                 //2 和密码相比较
-                if (repwdText != passwordText) {
+                if (repwdText !== passwordText) {
                     //3 提示用户
                     $("span.errorMsg").text("确认密码和密码不一致！");
 
@@ -136,7 +136,7 @@
                         <br>
                         <label>确认密码：</label>
                         <input class="itxt" type="password" placeholder="确认密码"
-                               autocomplete="off" tabindex="1" name="repwd" id="repwd" />
+                               autocomplete="off" tabindex="1" name="repwd" id="pwdCon" />
                         <br>
                         <br>
                         <label>电子邮件：</label>

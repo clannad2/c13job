@@ -1,5 +1,8 @@
 package com.cebbank.liuxiaoming.c13.bean;
 
+import org.hibernate.validator.constraints.Email;
+import org.hibernate.validator.constraints.NotEmpty;
+
 /**
  * 用户信息表
  *
@@ -7,9 +10,11 @@ package com.cebbank.liuxiaoming.c13.bean;
  * @create 2020-09-16
  */
 public class User {
+    @NotEmpty
     private String userName;
     private String userPwd;
     private String userPhone;
+    @Email
     private String userEmail;
 
     public User() {
