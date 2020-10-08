@@ -1,9 +1,10 @@
-package com.cebbank.liuxiaoming.c13.service;
+package com.cebbank.liuxiaoming.c13.service.impl;
 
 
 import com.cebbank.liuxiaoming.c13.bean.User;
-import com.cebbank.liuxiaoming.c13.dao.interfaceForDB.LoginDao;
-import com.cebbank.liuxiaoming.c13.dao.interfaceForDB.RegisterDao;
+import com.cebbank.liuxiaoming.c13.dao.interfaceForDao.LoginDao;
+import com.cebbank.liuxiaoming.c13.dao.interfaceForDao.RegisterDao;
+import com.cebbank.liuxiaoming.c13.service.interfaceforservice.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,7 +15,7 @@ import org.springframework.stereotype.Service;
  * @create 2020-09-16
  */
 @Service
-public class UserServiceImpl implements UserService{
+public class UserServiceImpl implements UserService {
     @Autowired
     LoginDao loginDao;
 

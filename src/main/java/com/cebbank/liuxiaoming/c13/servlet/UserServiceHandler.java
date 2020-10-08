@@ -1,7 +1,7 @@
 package com.cebbank.liuxiaoming.c13.servlet;
 
 import com.cebbank.liuxiaoming.c13.bean.User;
-import com.cebbank.liuxiaoming.c13.service.UserService;
+import com.cebbank.liuxiaoming.c13.service.interfaceforservice.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

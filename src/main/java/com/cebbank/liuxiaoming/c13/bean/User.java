@@ -17,14 +17,21 @@ public class User {
     @Email
     private String userEmail;
 
+    private String userBalance;
+
     public User() {
     }
 
-    public User(String userName, String userPwd, String userPhone, String userEmail) {
+    public User(String userName, String userPwd, String userPhone, String userEmail, String userBalance) {
         this.userName = userName;
         this.userPwd = userPwd;
         this.userPhone = userPhone;
         this.userEmail = userEmail;
+        this.userBalance = userBalance;
+    }
+
+    public String getUserBalance() {
+        return userBalance;
     }
 
     public String getUserName() {
@@ -59,6 +66,10 @@ public class User {
         this.userEmail = userEmail;
     }
 
+    public void setUserBalance(String userBalance) {
+        this.userBalance = userBalance;
+    }
+
     @Override
     public String toString() {
         return "User{" +
@@ -66,6 +77,7 @@ public class User {
                 ", userPwd='" + userPwd + '\'' +
                 ", userPhone='" + userPhone + '\'' +
                 ", userEmail='" + userEmail + '\'' +
+                ", userBalance='" + userBalance + '\'' +
                 '}';
     }
 }

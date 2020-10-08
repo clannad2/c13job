@@ -1,4 +1,4 @@
-package com.cebbank.liuxiaoming.c13.dao.interfaceForDB;
+package com.cebbank.liuxiaoming.c13.dao.interfaceForDao;
 
 
 import com.cebbank.liuxiaoming.c13.bean.User;

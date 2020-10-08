@@ -3,7 +3,7 @@ package com.cebbank.liuxiaoming.c13.dao.impl;
 
 import com.cebbank.liuxiaoming.c13.bean.User;
 import com.cebbank.liuxiaoming.c13.dao.BaseDao;
-import com.cebbank.liuxiaoming.c13.dao.interfaceForDB.RegisterDao;
+import com.cebbank.liuxiaoming.c13.dao.interfaceForDao.RegisterDao;
 import org.springframework.stereotype.Repository;
 
 /**

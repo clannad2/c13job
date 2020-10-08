@@ -1,4 +1,4 @@
-package com.cebbank.liuxiaoming.c13.service;
+package com.cebbank.liuxiaoming.c13.service.interfaceforservice;
 
 
 import com.cebbank.liuxiaoming.c13.bean.User;

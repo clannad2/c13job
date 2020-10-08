@@ -198,6 +198,21 @@
       <version>1.6.8.RELEASE</version>
     </dependency>
 
+    <!--使用jstl标签    -->
+    <!-- https://mvnrepository.com/artifact/org.apache.taglibs/taglibs-standard-impl -->
+    <dependency>
+      <groupId>org.apache.taglibs</groupId>
+      <artifactId>taglibs-standard-impl</artifactId>
+      <version>1.2.5</version>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/org.apache.taglibs/taglibs-standard-spec -->
+    <dependency>
+      <groupId>org.apache.taglibs</groupId>
+      <artifactId>taglibs-standard-spec</artifactId>
+      <version>1.2.5</version>
+    </dependency>
+
   </dependencies>
 
   <build>
