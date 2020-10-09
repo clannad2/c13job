@@ -10,7 +10,7 @@ public class Film {
     //电影价格
     private Float filmPrice;
     //电影票剩余
-    private String filmStock;
+    private Integer filmStock;
     //电影类型
     private String filmType;
     //电影主演
@@ -19,7 +19,7 @@ public class Film {
     public Film() {
     }
 
-    public Film(Integer filmId, String filmName, Float filmPrice, String filmStock, String filmType, String filmRole) {
+    public Film(Integer filmId, String filmName, Float filmPrice, Integer filmStock, String filmType, String filmRole) {
         this.filmId = filmId;
         this.filmName = filmName;
         this.filmPrice = filmPrice;
@@ -40,7 +40,7 @@ public class Film {
         return filmPrice;
     }
 
-    public String getFilmStock() {
+    public Integer getFilmStock() {
         return filmStock;
     }
 
@@ -64,7 +64,7 @@ public class Film {
         this.filmPrice = filmPrice;
     }
 
-    public void setFilmStock(String filmStock) {
+    public void setFilmStock(Integer filmStock) {
         this.filmStock = filmStock;
     }
 

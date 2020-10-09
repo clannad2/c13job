@@ -32,7 +32,7 @@ public class User {
         this.userBalance = userBalance;
     }
 
-    public Integer getId() {
+    public Integer getUserId() {
         return userId;
     }
 
@@ -76,8 +76,8 @@ public class User {
         this.userBalance = userBalance;
     }
 
-    public void setId(Integer id) {
-        this.userId = id;
+    public void setUserId(Integer userId) {
+        this.userId = userId;
     }
 
     @Override

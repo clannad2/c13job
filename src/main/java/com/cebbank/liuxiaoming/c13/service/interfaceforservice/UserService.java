@@ -18,4 +18,5 @@ public interface UserService {
     public Boolean register(User user);
     //判断用户是否已注册
     public Boolean ifExist(String userName);
+
 }

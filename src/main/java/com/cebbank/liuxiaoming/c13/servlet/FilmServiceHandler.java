@@ -46,7 +46,7 @@ public class FilmServiceHandler {
         Boolean flag = filmService.buyTicket(userId, filmId, filmNums);
         if (flag) {
             System.out.println("购票成功");
-            return "login_success";
+            return "buyticket_success";
         }
 
         return "register_error";

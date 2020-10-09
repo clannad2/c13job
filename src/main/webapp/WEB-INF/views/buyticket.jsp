@@ -76,7 +76,7 @@
                 <tr>剩余票数：</tr>
                 <tr>${film.filmStock}</tr>
                 <tr>
-                    <form href="buyticket" method="post">
+                    <form action="buyticket" method="post">
                         <input type="hidden" name="filmId" value="${film.filmId}">
                         <input type="hidden" name="userId" value="${sessionScope.user.userId}">
                         <input type="text" name="filmNums">

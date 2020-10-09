@@ -10,9 +10,10 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>登录成功界面</title>
+    <title>购票成功界面</title>
 </head>
 <body>
-登录成功
+购票成功
+<a href="loadingfilm">回到首页</a>
 </body>
 </html>

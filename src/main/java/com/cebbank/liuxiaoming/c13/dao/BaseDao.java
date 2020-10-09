@@ -27,7 +27,7 @@ public class BaseDao {
      */
     public int update(String sql, Object ...args) {
         int update = jt.update(sql, args);
-        ctx.close();
+        //ctx.close();
         return update;
     }
 

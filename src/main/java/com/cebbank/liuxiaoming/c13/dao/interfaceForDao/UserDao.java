@@ -11,6 +11,8 @@ public interface UserDao {
     public User queryUserByUserName(String userName);
     //注册用户
     public Integer registerUser(User user);
-    //买电影
+    //更新用户账户余额
     public Integer updateBalance(Integer userId,Float filmPrice);
+    //根据用户id查询当前余额
+    public Float queryBalanceByUserId(Integer userId);
 }

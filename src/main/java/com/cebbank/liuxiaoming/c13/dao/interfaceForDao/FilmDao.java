@@ -10,4 +10,5 @@ public interface FilmDao {
     public Film getFilmById(Integer id);
     public int updateFilmStock(Integer filmId,Integer num);
     public Float getFilmPriceById(Integer id);
+    public Integer getFilmStockByFilmId(Integer filmId);
 }
