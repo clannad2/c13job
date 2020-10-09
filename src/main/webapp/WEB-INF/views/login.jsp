@@ -14,7 +14,7 @@
 <body>
 <div>
     <div>
-        <span>欢迎登录</span>
+        <span>请先登录或注册</span>
     </div>
     <br/>
     <div>
@@ -40,6 +40,9 @@
                         <br/>
                         <input type="submit" value="登录"/>
                     </form>
+                    <br>
+                    <br>
+                    <a href="register">立即注册</a>
                 </div>
             </div>
         </div>

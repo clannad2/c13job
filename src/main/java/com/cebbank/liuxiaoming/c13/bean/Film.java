@@ -4,10 +4,11 @@ package com.cebbank.liuxiaoming.c13.bean;
  * 电影票信息
  */
 public class Film {
+    private Integer filmId;
     //电影名称
     private String filmName;
     //电影价格
-    private String filemPrice;
+    private Float filmPrice;
     //电影票剩余
     private String filmStock;
     //电影类型
@@ -18,20 +19,25 @@ public class Film {
     public Film() {
     }
 
-    public Film(String filmName, String filemPrice, String filmStock, String filmType, String filmRole) {
+    public Film(Integer filmId, String filmName, Float filmPrice, String filmStock, String filmType, String filmRole) {
+        this.filmId = filmId;
         this.filmName = filmName;
-        this.filemPrice = filemPrice;
+        this.filmPrice = filmPrice;
         this.filmStock = filmStock;
         this.filmType = filmType;
         this.filmRole = filmRole;
+    }
+
+    public Integer getFilmId() {
+        return filmId;
     }
 
     public String getFilmName() {
         return filmName;
     }
 
-    public String getFilemPrice() {
-        return filemPrice;
+    public Float getFilmPrice() {
+        return filmPrice;
     }
 
     public String getFilmStock() {
@@ -46,12 +52,16 @@ public class Film {
         return filmRole;
     }
 
+    public void setFilmId(Integer filmId) {
+        this.filmId = filmId;
+    }
+
     public void setFilmName(String filmName) {
         this.filmName = filmName;
     }
 
-    public void setFilemPrice(String filemPrice) {
-        this.filemPrice = filemPrice;
+    public void setFilmPrice(Float filmPrice) {
+        this.filmPrice = filmPrice;
     }
 
     public void setFilmStock(String filmStock) {
@@ -69,8 +79,9 @@ public class Film {
     @Override
     public String toString() {
         return "Film{" +
-                "filmName='" + filmName + '\'' +
-                ", filemPrice='" + filemPrice + '\'' +
+                "id=" + filmId +
+                ", filmName='" + filmName + '\'' +
+                ", filmPrice='" + filmPrice + '\'' +
                 ", filmStock='" + filmStock + '\'' +
                 ", filmType='" + filmType + '\'' +
                 ", filmRole='" + filmRole + '\'' +

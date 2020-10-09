@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
 @Service
 public interface UserService {
     //登录
-    public Boolean login(User user);
+    public User login(User user);
     //注册
     public Boolean register(User user);
     //判断用户是否已注册

@@ -260,6 +260,6 @@
 <%--    </tr>--%>
 
 <%--</table>--%>
-<a href="loadingfilm">欢迎进入影院系统</a>
+<a href="login">欢迎进入影院系统</a>
 </body>
 </html>

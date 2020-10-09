@@ -27,12 +27,19 @@
 <body>
 <table id="film" rules=rows border="1" frame="0">
     <tr style="height: 50px">
-        <td width="100" style="text-align: left;">万达影城</td>
         <td style="text-align: right;">
-            <a href="login">登录</a>
-            <a href="register">注册</a>
+            <span>欢迎</span>
+            <a>${sessionScope.user.userName}</a>
+            &nbsp&nbsp&nbsp&nbsp&nbsp
         </td>
     </tr>
+<%--    <tr style="height: 50px">--%>
+<%--        <td width="100" style="text-align: left;">万达影城</td>--%>
+<%--        <td style="text-align: right;">--%>
+<%--            <a href="login">登录</a>--%>
+<%--            <a href="register">注册</a>--%>
+<%--        </td>--%>
+<%--    </tr>--%>
 
     <tr>
         <td width="170" valign="top">
@@ -83,25 +90,58 @@
                         很抱歉，暂时没有影片上映
                 </c:if>
                 <c:if test="${!empty requestScope.films}">
-                    <c:forEach items="${requestScope.films}" var="film">
-                        <table id="movieList">
-                            <tr>
-                                <td>
-                                    <img src="static/img/img.png"/>--%>
-                                    <br>
-                                    片名:${film.filmName}
-                                    <br>
-                                    类型:${film.filmType}
-                                    <br>
-                                    主演：${film.filmRole}
-                                </td>
-                            </tr>
+                    <table id="movieList">
+                        <%
+                            int i=0;
+                        %>
+                        <c:forEach items="${films}" var="film">
+                            <%
+                                if (i%4==0){
+                                    out.write("</tr>");
+                                }
+                            %>
+                            <td style="height: 330px;width: 190px">
+                                <div>
+                                    <img src="img/img.jpg" width="150px" height="200px"/>
+<%--                                    <div>--%>
+<%--                                        <form action="getMovieInfo" method="post" name="getMovieInfo" style="margin-bottom: 0">--%>
+<%--                                            <input type="hidden" name="movieId" value="${movieInfo.id}">--%>
+<%--                                            <span>片名:</span>--%>
+<%--                                            <span>${film.filmName}</span>--%>
+<%--                                            <button type="submit">详情</button>--%>
+<%--                                        </form>--%>
+<%--                                    </div>--%>
+                                    <div>
+                                        <span>片名:</span>
+                                        <span>${film.filmName}</span>
+                                    </div>
+                                    <div>
+                                        <span>类型:</span>
+                                        <span>${film.filmType}</span>
+                                    </div>
+                                    <div>
+                                        <span>主演:</span>
+                                        <span>${film.filmRole}</span>
+                                    </div>
+                                    <div>
+                                        <form action="toticketdetail" method="post">
+                                            <input type="hidden" name="filmId" value="${film.filmId}">
+                                            <input type="submit" value="购票">
+                                        </form>
 
-<%--                            <tr>--%>
-<%--                                <C:button name="submit" value="购票"/>--%>
-<%--                            </tr>--%>
-                        </table>
-                    </c:forEach>
+                                    </div>
+                                    <%
+                                        i++;
+                                    %>
+                                </div>
+                            </td>
+                            <%
+                                if (i%4==0){
+                                    out.write("</tr>");
+                                }
+                            %>
+                        </c:forEach>
+                    </table>
 
                 </c:if>
 

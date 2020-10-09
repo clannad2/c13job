@@ -2,8 +2,7 @@ package com.cebbank.liuxiaoming.c13.service.impl;
 
 
 import com.cebbank.liuxiaoming.c13.bean.User;
-import com.cebbank.liuxiaoming.c13.dao.interfaceForDao.LoginDao;
-import com.cebbank.liuxiaoming.c13.dao.interfaceForDao.RegisterDao;
+import com.cebbank.liuxiaoming.c13.dao.interfaceForDao.UserDao;
 import com.cebbank.liuxiaoming.c13.service.interfaceforservice.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -17,24 +16,17 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserServiceImpl implements UserService {
     @Autowired
-    LoginDao loginDao;
-
-    @Autowired
-    RegisterDao registerDao;
+    UserDao userDao;
 
     @Override
-    public Boolean login(User user) {
-        User result = loginDao.queryUserByUserNameAndPwd(user);
-        if (result == null){
-            return false;
-        }else{
-            return true;
-        }
+    public User login(User user) {
+        User result = userDao.queryUserByUserNameAndPwd(user);
+        return result;
     }
 
     @Override
     public Boolean register(User user) {
-        Integer integer = registerDao.registerUser(user);
+        Integer integer = userDao.registerUser(user);
         if (integer == 0){
             return false;
         }
@@ -44,7 +36,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public Boolean ifExist(String userName) {
-        User user = loginDao.queryUserByUserName(userName);
+        User user = userDao.queryUserByUserName(userName);
         if (user==null){
             return false;
         }

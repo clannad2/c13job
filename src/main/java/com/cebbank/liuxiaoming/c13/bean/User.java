@@ -10,6 +10,7 @@ import org.hibernate.validator.constraints.NotEmpty;
  * @create 2020-09-16
  */
 public class User {
+    private Integer userId;
     @NotEmpty
     private String userName;
     private String userPwd;
@@ -17,12 +18,13 @@ public class User {
     @Email
     private String userEmail;
 
-    private String userBalance;
+    private Float userBalance;
 
     public User() {
     }
 
-    public User(String userName, String userPwd, String userPhone, String userEmail, String userBalance) {
+    public User(Integer id, String userName, String userPwd, String userPhone, String userEmail, Float userBalance) {
+        this.userId = id;
         this.userName = userName;
         this.userPwd = userPwd;
         this.userPhone = userPhone;
@@ -30,7 +32,11 @@ public class User {
         this.userBalance = userBalance;
     }
 
-    public String getUserBalance() {
+    public Integer getId() {
+        return userId;
+    }
+
+    public Float getUserBalance() {
         return userBalance;
     }
 
@@ -66,18 +72,23 @@ public class User {
         this.userEmail = userEmail;
     }
 
-    public void setUserBalance(String userBalance) {
+    public void setUserBalance(Float userBalance) {
         this.userBalance = userBalance;
+    }
+
+    public void setId(Integer id) {
+        this.userId = id;
     }
 
     @Override
     public String toString() {
         return "User{" +
-                "userName='" + userName + '\'' +
+                "id=" + userId +
+                ", userName='" + userName + '\'' +
                 ", userPwd='" + userPwd + '\'' +
                 ", userPhone='" + userPhone + '\'' +
                 ", userEmail='" + userEmail + '\'' +
-                ", userBalance='" + userBalance + '\'' +
+                ", userBalance=" + userBalance +
                 '}';
     }
 }
