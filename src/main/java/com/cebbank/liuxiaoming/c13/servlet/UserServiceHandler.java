@@ -1,7 +1,6 @@
 package com.cebbank.liuxiaoming.c13.servlet;
 
 import com.cebbank.liuxiaoming.c13.bean.User;
-import com.cebbank.liuxiaoming.c13.service.impl.UserServiceImpl;
 import com.cebbank.liuxiaoming.c13.service.interfaceforservice.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -27,7 +26,7 @@ public class UserServiceHandler {
     }
 
     @RequestMapping("/toregister")
-    public String register(User user){
+    public String register(User user, Map<String,Object> map){
         System.out.println(user);
         String userName = user.getUserName();
         Boolean ifExist = userService.ifExist(userName);
@@ -38,7 +37,9 @@ public class UserServiceHandler {
 
         Boolean register = userService.register(user);
         if (register){
-            return "register_success";
+            User result = userService.login(user);
+            map.put("user",result);
+            return "redirect:loadingfilm";
         }
         return "register_error";
     }

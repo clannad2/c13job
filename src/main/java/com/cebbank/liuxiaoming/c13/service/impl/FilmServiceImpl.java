@@ -6,7 +6,6 @@ import com.cebbank.liuxiaoming.c13.dao.interfaceForDao.UserDao;
 import com.cebbank.liuxiaoming.c13.service.interfaceforservice.FilmService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
@@ -31,7 +30,6 @@ public class FilmServiceImpl implements FilmService {
     @Transactional
     public Boolean buyTicket(Integer userId, Integer filmId,Integer nums) {
         int filmRows = filmDao.updateFilmStock(filmId, nums);
-        System.out.println(10/0);
         Float filmPrice = filmDao.getFilmPriceById(filmId)*nums;
         Integer userRows = userDao.updateBalance(userId, filmPrice);
 

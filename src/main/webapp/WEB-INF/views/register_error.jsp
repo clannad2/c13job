@@ -12,7 +12,7 @@
     <title>注册失败界面</title>
 </head>
 <body>
-注册失败，请重新进行注册
+用户已存在，请重新注册
 <div>
     <a href="register">立即注册</a>
 </div>
