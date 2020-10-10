@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
  * @author liuxiaoming
  * @create 2020-09-16
  */
-@Service
+
 public interface UserService {
     //登录
     public User login(User user);

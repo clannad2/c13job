@@ -3,7 +3,7 @@ package com.cebbank.liuxiaoming.c13.dao.interfaceForDao;
 import com.cebbank.liuxiaoming.c13.bean.User;
 import org.springframework.stereotype.Repository;
 
-@Repository
+
 public interface UserDao {
     //通过用户名和密码验证用户
     public User queryUserByUserNameAndPwd(User user);

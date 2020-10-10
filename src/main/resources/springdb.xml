@@ -5,16 +5,16 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
     <!--    配置自动扫描注解-->
     <context:component-scan base-package="com.cebbank.liuxiaoming.c13">
-<!--        <context:exclude-filter type="annotation"-->
-<!--                                expression="org.springframework.stereotype.Controller"/>-->
-<!--        <context:exclude-filter type="annotation"-->
-<!--                                expression="org.springframework.web.bind.annotation.ControllerAdvice"/>-->
+        <context:exclude-filter type="annotation"
+                                expression="org.springframework.stereotype.Controller"/>
+        <context:exclude-filter type="annotation"
+                                expression="org.springframework.web.bind.annotation.ControllerAdvice"/>
     </context:component-scan>
 
     <!--引入属性文件
        locationg：类路径下的地址-->
 
-    <context:property-placeholder location="db.properties"/>
+    <context:property-placeholder location="classpath:db.properties"/>
 
     <!--管理数据连接池-->
     <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">

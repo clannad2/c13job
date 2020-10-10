@@ -33,7 +33,7 @@ public class UserDaoImpl extends BaseDao implements UserDao {
     public Integer updateBalance(Integer userId, Float filmPrice) {
         Float userBalance = queryBalanceByUserId(userId);
         if (userBalance < filmPrice) {
-            throw new BalanceException("余额不足，请及时充值");
+            throw new RuntimeException("余额不足，请及时充值");
         }else{
             String updateItem = "update userinfo set userBalance = userBalance-? where userId = ?";
             int update = update(updateItem, filmPrice, userId);

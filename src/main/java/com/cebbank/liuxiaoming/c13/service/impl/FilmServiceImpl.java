@@ -28,9 +28,10 @@ public class FilmServiceImpl implements FilmService {
     }
 
     @Override
-    @Transactional(propagation = Propagation.REQUIRED)
+    @Transactional
     public Boolean buyTicket(Integer userId, Integer filmId,Integer nums) {
         int filmRows = filmDao.updateFilmStock(filmId, nums);
+        System.out.println(10/0);
         Float filmPrice = filmDao.getFilmPriceById(filmId)*nums;
         Integer userRows = userDao.updateBalance(userId, filmPrice);
 

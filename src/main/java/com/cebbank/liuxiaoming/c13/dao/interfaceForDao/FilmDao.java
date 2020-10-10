@@ -4,7 +4,7 @@ import com.cebbank.liuxiaoming.c13.bean.Film;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
-@Repository
+
 public interface FilmDao {
     public List<Film> getAll();
     public Film getFilmById(Integer id);

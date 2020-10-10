@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
+
 public interface FilmService {
     public List<Film> getAllFilms();
     public Film getFilmById(Integer id);

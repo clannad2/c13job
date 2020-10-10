@@ -2,6 +2,7 @@ package com.cebbank.liuxiaoming.c13.servlet;
 
 import com.cebbank.liuxiaoming.c13.bean.Film;
 import com.cebbank.liuxiaoming.c13.bean.User;
+import com.cebbank.liuxiaoming.c13.service.impl.FilmServiceImpl;
 import com.cebbank.liuxiaoming.c13.service.interfaceforservice.FilmService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

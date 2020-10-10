@@ -27,7 +27,7 @@ public class FilmDaoImpl extends BaseDao implements FilmDao {
     public int updateFilmStock(Integer filmId, Integer nums) {
         Integer filmStock = getFilmStockByFilmId(filmId);
         if (filmStock<=nums){
-            throw  new StockException("库存不足");
+            throw  new RuntimeException("库存不足");
         }else{
             String updateItem = "update filminfo set filmStock = filmStock-? where filmId = ?";
             int update = update(updateItem, nums, filmId);
